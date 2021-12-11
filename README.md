@@ -1,6 +1,8 @@
 # XPS9700_HACK
 
-My main goal for this repo is to provide a smooth installation experience with no indefinite steps that'll be hard to follow, which is why I've documented everything to a pretty high extent. You *can* skip through and probably be just fine, but I'd still advise you to take your time, this is not an easy task after all...
+My main goal for this "guide" is to provide a smooth installation experience with no indefinite steps that'll be hard to follow, which is why I've documented everything to a pretty high extent. You *can* skip through and probably be just fine, but I'd still advise you to take your time, this is not an easy task after all...
+
+This repo has been built from the ground up, by doing a lot of research and running several experiments, which means that it's not a mutant made from many different machines, as others sadly are. There are no questionable files or settings and everything has been well thought out, optimizing for efficiency and quick boot times. If you want to contribute, please stick to this mentality.
 
 ## Table of Contents
 
@@ -34,7 +36,7 @@ After adding custom bought parts, this is what I'm running on (check against you
 | Sensors | Intel 8086:06fc:1028:098f 400 Series Sensor Hub | not yet tested | / |
 | **Not Working** |
 | Speakers & Jack | Codec currently unknown | no | / |
-| SK Hynix PC611 1TB | M.2 Gen3 SSD, Slot A | no | deactivated using SSDT |
+| SK Hynix PC611 1TB | M.2 Gen3 SSD, Slot A | no, never will | deactivated using SSDT |
 | Nvidia RTX 2060 Max-Q | 6GB DDR6 VRAM | no, never will | deactivated using SSDT |
 | Fingerprint reader | Shenzhen Goodix 27c6:533c | no, never will | / |
 
