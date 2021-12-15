@@ -2,8 +2,8 @@
 
 ![Preview](img/preview.jpg)
 
-✅ This configuration is fully compatible with `macOS BigSur` **and** `macOS Monterey`!
-
+✅ This configuration is fully compatible with `macOS BigSur`, `macOS Monterey` and `macOS Catalina`!\
+⏳ The latest supported and tested version is: `macOS BigSur 12.1`.\
 😔 One of the most awesome features of this laptop doesn't **yet** work: audio. If you want to help, contact me!
 
 My main goal for this "guide" is to provide a smooth installation experience with no indefinite steps, which is why I've documented everything to a pretty high extent. You *can* skip through and probably be just fine, but I'd still advise you to take your time!
@@ -205,4 +205,14 @@ After generating, replace the one I created in `EFI/OC/Kexts`, just to be safe t
 
 The stock thermal paste and pads are (in my humble opinion) very poor, and swapping them out for better stuff will yield better temps, don't underestimate this! It's not that hard to disassemble the vapor-chamber, if you managed to open the laptop up in the first place, this'll be a piece of cake!
 
-// TODO: Write instructions on how to accomplish this once the parts arrive
+I ordered three different thermal-pads: `0.5mm`, `1.0mm` and `3.0mm`. You'll need the first two underneath the vapor-champer, and I then used the thickest one inbetween the M.2 slot heatsinks and the chassis bottom, to further help dissipate the otherwise uprising heats towards my palms. As for thermal-paste, I went with `Thermal Grizzly Kryonaut`.
+
+![Thermal pads](img/thermalpads.jpeg)
+
+After application, this is what it looked like:
+
+![Paste applied](img/paste_applied.jpg)
+
+I also cleaned up the vapor champer before putting the new pads down, and it was *very* dirty. Acetone was a great helper for all cleaning purposes, since it really gets the job done.
+
+![Pads applied](img/pads_applied.jpg)
