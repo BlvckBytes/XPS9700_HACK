@@ -216,3 +216,7 @@ After application, this is what it looked like:
 I also cleaned up the vapor champer before putting the new pads down, and it was *very* dirty. Acetone was a great helper for all cleaning purposes, since it really gets the job done.
 
 ![Pads applied](img/pads_applied.jpg)
+
+The `3.0mm`-Pads were a perfect fit to make contact with the chassis and now help to dissipate the generated heat from both M.2 drives.
+
+![M.2 Pads](img/m2_thermals.jpg)
