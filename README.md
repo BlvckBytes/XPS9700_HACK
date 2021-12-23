@@ -4,7 +4,7 @@
 
 ✅ This configuration is fully compatible with `macOS BigSur`, `macOS Monterey` and `macOS Catalina`!\
 ⏳ The latest supported and tested version is: `macOS BigSur 12.1`.\
-😔 One of the most awesome features of this laptop doesn't **yet** work: audio. If you want to help, contact me!
+😔 Two of the most awesome features of this laptop don't **yet** work: S3 sleep and audio. If you want to help, contact me!
 
 My main goal for this "guide" is to provide a smooth installation experience with no indefinite steps, which is why I've documented everything to a pretty high extent. You *can* skip through and probably be just fine, but I'd still advise you to take your time!
 
@@ -21,7 +21,6 @@ My main goal for this "guide" is to provide a smooth installation experience wit
   * [System Preferences](#system-preferences)
   * [Hackintool](#hackintool)
   * [VoltageShift](#voltageshift)
-  * [CPUFriendFriend](#cpufriendfriend)
   * [Re\-paste and Re\-pad](#re-paste-and-re-pad)
 
 ## Hardware
@@ -48,14 +47,15 @@ After adding custom bought parts, this is what I'm running on (check against you
 | SD-Card reader | Realtek RTS5260 | yes, with most cards | / |
 | Webcam | Micromedia 0c45:6d14, 0.9MP | yes, fully | / |
 | Battery | DELL 01RR3YM Li-poly 95.1Wh | yes, fully | / |
+| Sensors | Intel 8086:06fc:1028:098f 400 Series Sensor Hub | yes | Fans & Temps |
+| Thunderbolt 3 | Intel JHL7540, JHL6540 | yes, yet w/o hotplug | / |
 | **Untested** |
 | Gigabit Ethernet | Realtek RTL8153 | not yet tested | / |
-| Thunderbolt 3 | Intel JHL7540, JHL6540 | not yet tested | / |
 | USB-C Video 4K@60Hz | / | not yet tested | / |
-| Sensors | Intel 8086:06fc:1028:098f 400 Series Sensor Hub | not yet tested | / |
 | **Currently Not Working** |
-| Speakers & Jack | Codec currently unknown, it's tough | no | / |
-| Ambient Light Sensor | Would be nice, haven't yet worked on it | no | / |
+| Speakers & Jack | / | no | Codec currently unknown, it's tough |
+| Ambient Light Sensor | / | no | _ALI only responds 0x0 |
+| S3 sleep state | Deepest possible sleep state | no | panics on wake |
 | **Dead forever** |
 | SK Hynix PC611 1TB | M.2 Gen3 SSD, Slot A | no | deactivated using SSDT |
 | Nvidia RTX 2060 Max-Q | 6GB DDR6 VRAM | no | deactivated using SSDT |
@@ -68,6 +68,7 @@ I am on the currently (date: 11th Dec, 2021) latest available BIOS, which I inst
 | Menu | Setting | State |
 | ---- | ------- | ----- |
 | Boot Configuration | Enable Secure Boot | Off |
+| Pre-boot Behavior | Fastboot | Thorough |
 | Integrated Devices | Thunderbolt Security Level | No Security |
 | Storage | Sata Operation | AHCI |
 | Power | Enable Lid Switch | On |
@@ -184,22 +185,6 @@ sudo ./voltageshift buildlaunchd -130 -75 -90 0 0 0 1 90 45 -1
 ```
 
 Afterwards, just reboot and check with `./voltageshift into` if your work has been applied.
-
-### CPUFriendFriend
-
-I'd like you to generate your own CPU power management data provider, since your setup may vary from mine. The python script makes it incredibly easy, it just requires two keypresses.
-
-Download [CPUFriendFriend](https://github.com/corpnewt/CPUFriendFriend), which contains `CPUFriendFriend.py`. 
-
-Then, call `./CPUFriendFriend.command` and follow these steps:
-
-* Choose 800MHz by typing 0x08
-* Choose Balanced Power by typing 0x80
-* Choose the default by typing 0x05
-* Choose no, since we have enough power saving by now
-* Building...
-
-After generating, replace the one I created in `EFI/OC/Kexts`, just to be safe that it really does match your machine's CPU. This will help keeping the clock frequency down on light tasks, and thus save battery.
 
 ### Re-paste and Re-pad
 
