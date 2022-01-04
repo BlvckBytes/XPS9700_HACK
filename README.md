@@ -49,9 +49,10 @@ After adding custom bought parts, this is what I'm running on (check against you
 | Battery | DELL 01RR3YM Li-poly 95.1Wh | yes, fully | / |
 | Sensors | Intel 8086:06fc:1028:098f 400 Series Sensor Hub | yes | Fans & Temps |
 | Thunderbolt 3 | Intel JHL7540, JHL6540 | yes, yet w/o hotplug | / |
+| USB-C Video 4K@60Hz | / | yes, fully | / |
+| External Monitor Audio | / | yes, fully | / |
 | **Untested** |
 | Gigabit Ethernet | Realtek RTL8153 | not yet tested | / |
-| USB-C Video 4K@60Hz | / | not yet tested | / |
 | **Currently Not Working** |
 | Speakers & Jack | / | no | Codec currently unknown, it's tough |
 | Ambient Light Sensor | / | no | _ALI only responds 0x0 |
